@@ -1,1 +1,23 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var path = window.location.pathname;
+            var redirects = {
+                '/bible': '/pages/bible',
+                '/catechism': '/pages/catechism'
+            };
+            if (redirects[path]) {
+                window.location.href = redirects[path];
+            } else {
+                document.body.innerHTML = '<p>The requested page was not found. If you are not redirected automatically, follow the appropriate <a href="https://www.ictphx.org">link</a>.</p>';
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
